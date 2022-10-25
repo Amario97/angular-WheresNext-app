@@ -1,8 +1,37 @@
-<h4>{{currentUser}}</h4>
+<mat-toolbar color="primary">
+    <span>Where'sNext! </span>
+    <br/>
+    <h4>{{currentUser}}</h4><br/>
 
+    
+    <div class="toolbar-menu">
+        <a mat-button routerLink="/">Home</a>
+        <a mat-button routerLink="/Profile">Profile</a>
+        <a mat-button routerLink="/Favorites">Favorites</a>
+        <a mat-button routerLink="/Feedback">Feedback</a>
+        <!-- <a mat-button routerLink="/Login">Login</a> -->
+      </div>
+  
+  
+  </mat-toolbar>
+<br/>
+<br/>
+ 
 <div *ngIf="!loggedIn">
- <signin></signin>
- </div>
-<div *ngIf="loggedIn">
-<app-logout></app-logout>
-</div>
+    <signin></signin>
+    </div>
+   <div *ngIf="loggedIn">
+   <app-logout></app-logout>
+   </div>
+   
+  
+  
+  
+
+<router-outlet></router-outlet>
+
+    
+<app-users></app-users>
+
+
+
